@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         select { 
+margin: 0 auto; 
+width:250px;
+}
+tr:nth-child(even) {background-color: grey;}
+    </style>
+</head>
+<body>
+    <form action = "form.html">
+        <table style="text-align:center">
+            
+        <tr>
+            <td>First name</td>
+            <td><input type = "text" name = "firstname" placeholder="enter your first name" required ></td>
+        </tr>
+        <tr>
+        <td>Last name</td>
+        <td><input type = "text" name = "lastname"></td>
+        </tr>
+        <tr>
+            <td>Name of your Country</td>
+            <td><input type = "text" name = "city"></td>
+        </tr>
+        <tr>
+        <td>City</td>
+        <td><input type = "password" name = "city" placeholder="Enter your password" required ></td>
+        </tr>
+        <tr>
+        <td>State</td>
+        <td><input type = "password" name = "city" placeholder="Confirm your password"></td>
+        </tr>
+        
+        </table>
+        <br>
+        <div style="text-align:center">
+        <label for="Money" style="text-align:right;">How would you like to donate to charity?</label>
+        <br>
+        
+        <select name="Money">
+            <option>PayPal</option>
+            <option>Bank Transfer</option>
+            <option>Cash Dead Drop</option>
+            <option>Wire Transfer</option>
+        </select>
+        <br>
+        <p>How much?</p>
+        <input id="1"type="radio" name="cash" value="10000">
+        <label for="1">$10000</label>
+        <input id="2"type="radio" name="cash" value="10000">
+        <label for="2">$100000</label>
+        <input id ="3" type="radio" name="cash" value="10000">
+        <label for="3">$1000000</label>
+        <input id="4" type="radio" name="cash" value="10000">
+        <label for="4">$10000000</label>
+        <br>
+        <button>Donate good cause</button>
+        <br>
+        <iframe src="Index.html" title="Search your stuff here" width="500" height="500"></iframe>
+
+    </form>  
+</div>
+</body>
+</html>
