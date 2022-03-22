@@ -6,88 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="PortoStyle.css">
+    <style>
+      
+    </style>
 </head>
 
 <body>
-  <div class="container">
-      
-  <ul>
-    <li><a href="New.html">Home</a></li>
-    <li><a href="Academic.html">My Academic Profile</a></li>
-    <li><a href="Work.html">Work Experience</a></li>
-    <li><a href="Contact.html">Contact</a></li>
-  </ul>
-</div>
-  <main>
+  <div class="menu">
+      <a href="#mainarea">Home</a>
+      <a href="#Academic">My Academic Profile</a>
+      <a href="#Work">Work Experience</a>
+      <a href="#Interests">Interests</a> 
+  </div>
+  <div class="container"></div>
+  <!--div class="roof"></div-->
+  <div class="mainarea" id="mainarea">
+    <div class="maintext"><p class="standard">Hi, I am Haziq.</p>
+    <p class="standard">See that messy haired idiot on the right.</p>
     
+    </div>
+  </div>
+  <div class="Academic" id="Academic">
+    <div class="hidehoverstuff">Hover to see more details!</div>
+    <div class="hidehoverstuff">Currently studying in SUSS (Degree)
+      <div class="hidden"><span class ="spanking">Courses taken:</div></span>
+      <div class="hidden"><span class ="spanking"> Structured Programming (Python)</div></span>
+      <div class="hidden"><span class ="spanking">  Calculus I and II</div></span>
+      <div class="hidden"><span class ="spanking"> Analogue Electronics </div></span>
+    </div>
+    <div class="hidehoverstuff">Past academic courses
+      <div class="hidden"><span class ="spanking"> Ngee Ann Polytechnic: Marine and Offshore Technology (Diploma)</div></span>
+      <div class="hidden"><span class ="spanking"> Chua Chu Kang Secondary School('O' Level)</div></span>
+    </div>
     
-    <table border="1"width="600" height="400" align="center">
-        <thead>
-          <tr>
-            <th colspan="4"><strong>My Profile</strong></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td rowspan="2" align="center"><img src="images/samantha-gades-BlIhVfXbi9s-unsplash.jpg" width="100"></td>
-            <td colspan="3" rowspan="2">
-                <p>Name: Muhammad Haziq bin Zainudin</p>
-                <p>Contact: 98178591</p>
-                <p><a href="mailto:haziqzainudin94@hotmail.com">Email</p></a>
-            </td>
-          </tr>
-          <tr>
-          </tr>
-          <tr>
-            <td colspan="4" align="center">History of histories</td>
-          </tr>
-          <tr>
-            <td rowspan="2">
-                <p><a href="New.html">Home Page</a></p>
-                <p><a href = "New copy.html">Academic History</a></span></p>
-                <p><a href="New copy 2.html">Work History</a></p>
-                <p><a href="New copy 3.html"><span style="background-color: blueviolet;">History of histories</span></a></p>
-            </td>
-            <td colspan="3" rowspan="2">
-                <ol>
-                    <p>Under da sea</p>
-                    <p>Under da seaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                    
-                    
-                </ol>
-            </td>
-          </tr>
-          <tr>
-          </tr>
-        </tbody>
-        </table>
-      </main>
-    <!-- 
-      <form> has 
-      <input type="button">
-      <input type="checkbox">
-      <input type="color">
-      <input type="date">
-      <input type="datetime-local">
-      <input type="email">
-      <input type="file">
-      <input type="hidden">
-      <input type="image">
-      <input type="month">
-      <input type="number">
-      <input type="password">
-      <input type="radio">
-      <input type="range">
-      <input type="reset">
-      <input type="search">
-      <input type="submit">
-      <input type="tel">
-      <input type="text"> (default value)
-      <input type="time">
-      <input type="url">
-      <input type="week">
-      label for follows the id of the input
-      -->
-    
+        
+    </div>
+  </div>
+
+  <div class="work" id="Work">
+    <div class="workbase">
+      <ol class="worktext">
+        <li class="worktext"><details><summary>Cubic Technologies Singapore Pte Ltd</summary>
+          <p>Job Scope:</p>
+        <ul>
+         
+          <li class="worktext"></li>
+          <li class="worktext">OOP</li>
+          <li class="worktext">Machine Learning</li>
+
+        </ul>
+      </li></details><br>
+        <li class="worktext"><details><summary>Ngee Ann Poltechnic</summary>
+          <ul>
+          <li class="worktext">Marine and Offshore Technology</li>
+        </ul>
+        </li></details><br>
+        <li class="worktext">Currently studying in SUSS</li><br>
+      </ol>
+    </div>
+  </div>
+  
 </body>
 </html>
+
+<script src="main.js"></script>
