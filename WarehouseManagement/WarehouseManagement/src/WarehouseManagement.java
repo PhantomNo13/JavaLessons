@@ -24,6 +24,8 @@ public class WarehouseManagement
         WarehouseSections ws = new WarehouseSections();
         FrozenSection fs1 = new FrozenSection();
         WarehouseReordering wr = new WarehouseReordering();
+        DriedSection ds = new DriedSection();
+        FreshSection fs = new FreshSection();
     
         int count = 0;
    
@@ -53,7 +55,7 @@ public class WarehouseManagement
                 } catch (Exception I)
                 {
                     System.out.println(I);
-                    System.out.println("WRONG ANSWER");
+                    System.out.println("No.");
                     deathCount++;
                 }
                 if (deathCount == 10)
@@ -91,7 +93,7 @@ public class WarehouseManagement
                     quantityList = fileIn.InputQuantity("DriedItemQuantity.txt");
                     OverallReordering or = new OverallReordering(itemList, quantityList);
     
-                    or.chooseOne(wr);
+                    or.chooseOne(ds);
                     op.Output("DriedItemList.txt", itemList);
                     op.OutputQuantity("DriedItemQuantity.txt",quantityList);
                     break;
@@ -100,7 +102,7 @@ public class WarehouseManagement
                     quantityList = fileIn.InputQuantity("FreshItemQuantity.txt");
                     OverallReordering dr = new OverallReordering(itemList, quantityList);
     
-                    dr.chooseOne(wr);
+                    dr.chooseOne(fs);
     
                     op.Output("FreshItemList.txt", itemList);
                     op.OutputQuantity("FreshItemQuantity.txt",quantityList);
@@ -141,10 +143,21 @@ class OverallReordering
     {
         while (count<1)
         {
+            int menuSelect;
             count = 0;
             ref.displayItems(itemList, quantityList);
-            System.out.println("1 to add, 2 to remove, 3 to edit, 4 to display items, 5 for special function");
-            int menuSelect = Integer.parseInt(scan.nextLine());
+            System.out.println("1 to add, 2 to remove, 3 to edit, 4 to display items, 5 for special function, 6 to exit");
+            while(true)
+                try
+                {
+                    menuSelect = Integer.parseInt(scan.nextLine());
+                    break;
+                }
+            catch (Exception e)
+            {
+                System.out.println("Wrong number.");
+            }
+            
             switch (menuSelect)
             {
                 
@@ -215,7 +228,7 @@ class WarehouseReordering
                     break;
                 } catch (NumberFormatException e)
                 {
-                    System.out.println("Liar");
+                    System.out.println("No.");
                 }
             }
             p = p-1;
@@ -325,7 +338,7 @@ class DriedSection extends WarehouseReordering
 {
     void specialFunction()
     {
-    
+        System.out.println("This is supposed to do something");
     }
 }
 
@@ -333,7 +346,8 @@ class FreshSection extends WarehouseReordering
 {
     void specialFunction()
     {
-        
+        System.out.println("This is supposed to do something");
+    
     }
 }
 class Input
@@ -384,10 +398,7 @@ class Output implements Serializable
     void OutputQuantity(String outputFile, ArrayList<Integer> a) throws Exception
     {
         ArrayList<String> b = new ArrayList<>();
-        a.forEach((e) ->
-        {
-            b.add(e.toString());
-        });
+        a.forEach((e) -> b.add(e.toString()));
         
         Files.write(Path.of(outputFile),b);
         
